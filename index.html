@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html ng-app="angularCalc">
+	<head>
+		<title>Angular.js Calculator</title>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	</head>
+	<body ng-controller="mainCtrl">
+
+		<h1 style="text-align: center">Angular Calculator</h1>
+
+		<div id="calculator">
+			<input class="field" placeholder="Enter number." ng-model="num1"></input>
+			<div class="buttons">
+				<button ng-click="operator = '+'">+</button>
+				<button ng-click="operator = '-'">-</button>
+				<button ng-click="operator = '*'">*</button>
+				<button ng-click="operator = '/'">/</button>
+			</div>
+			<input class="field" placeholder="Enter number." ng-model="num2"></input>
+			<button class="buttons" ng-click="Calculate()">Enter</button>
+			<p class="output">Output: {{result}}</p>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular.min.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/mainCtrl.js"></script>
+	</body>
+</html>
