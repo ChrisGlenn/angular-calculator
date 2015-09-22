@@ -9,6 +9,7 @@
 		<h1 style="text-align: center">Angular Calculator</h1>
 
 		<div id="calculator">
+			<button class="buttons" ng-click="Clear()">Clear</button>
 			<input class="field" placeholder="Enter number." ng-model="num1"></input>
 			<div class="buttons">
 				<button ng-click="operator = '+'">+</button>
@@ -16,6 +17,7 @@
 				<button ng-click="operator = '*'">*</button>
 				<button ng-click="operator = '/'">/</button>
 			</div>
+			<p class="field">{{operator}}</p>
 			<input class="field" placeholder="Enter number." ng-model="num2"></input>
 			<button class="buttons" ng-click="Calculate()">Enter</button>
 			<p class="output">Output: {{result}}</p>
